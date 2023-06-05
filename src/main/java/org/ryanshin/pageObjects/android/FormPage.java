@@ -37,6 +37,9 @@ public class FormPage {
 	@AndroidFindBy(xpath="//android.widget.RadioButton[@text='Male']")
 	private WebElement maleOption;
 	
+	@AndroidFindBy(id="android:id/text1")
+	private WebElement countrySelection;
+	
 	//-- Actions --//
 	
 	public void setNameField(String name) {
