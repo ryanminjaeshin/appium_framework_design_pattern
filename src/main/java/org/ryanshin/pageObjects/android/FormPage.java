@@ -43,6 +43,9 @@ public class FormPage extends AndroidActions {
 	@AndroidFindBy(id="android:id/text1")
 	private WebElement countrySelection;
 	
+	@AndroidFindBy(id = "com.androidsample.generalstroe:id/btnLetsShop")
+	public WebElement shopButton;
+	
 	//-- Actions --//
 	
 	public void setNameField(String name) {
@@ -63,7 +66,10 @@ public class FormPage extends AndroidActions {
 		scrollToText(countryName);
 		androidDriver.findElement(By.xpath("//android.widget.TextView[@text='"+countryName+"']")).click();
 		
-		
+	}
+	
+	public void submitForm() {
+		shopButton.click();
 	}
 
 }
