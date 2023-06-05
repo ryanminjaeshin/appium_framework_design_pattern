@@ -46,7 +46,8 @@ public class Appium extends BaseTest {
 	@DataProvider // it always expect to return two dimensional array object.
 	public Object[][] getData() {
 		return new Object[][] {
-			{"ryan shin", "female", "Argentina"}
+			{"ryan shin", "female", "Argentina"},
+			{"ryan kim", "female", "Argentina"}
 		};
 	}
 
