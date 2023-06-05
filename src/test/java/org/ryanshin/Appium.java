@@ -21,6 +21,7 @@ public class Appium extends BaseTest {
 	public void WifiSettingTest() throws MalformedURLException {
 		
 		FormPage formPage = new FormPage(androidDriver);
+		formPage.setNameField("Ryan Shin");
 
 		// Actual Automation
 		// Xpath, id, className, androidUIAutomtor(AppiumBy.), accessibilityId(AppiumBy.)
