@@ -19,7 +19,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 public class Appium extends BaseTest {
 	
 	@Test
-	public void FillForm() throws MalformedURLException {
+	public void FillForm() throws MalformedURLException, InterruptedException {
 		
 		FormPage formPage = new FormPage(androidDriver);
 		
@@ -31,6 +31,7 @@ public class Appium extends BaseTest {
 		ProductCatalog productCatalog = new ProductCatalog(androidDriver);
 		productCatalog.addItemToCartByIndex(0);
 		productCatalog.addItemToCartByIndex(0);
+		productCatalog.goToCartPage();
 
 		
 	}
