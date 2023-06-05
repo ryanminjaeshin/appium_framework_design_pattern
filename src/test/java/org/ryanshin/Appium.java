@@ -18,7 +18,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 public class Appium extends BaseTest {
 	
 	@Test
-	public void WifiSettingTest() throws MalformedURLException {
+	public void FillForm() throws MalformedURLException {
 		
 		FormPage formPage = new FormPage(androidDriver);
 		
@@ -26,17 +26,7 @@ public class Appium extends BaseTest {
 		formPage.setGender("female");
 		formPage.setCountrySelection("Argentina");
 		formPage.submitForm();
-
-		// Actual Automation
-		// Xpath, id, className, androidUIAutomtor(AppiumBy.), accessibilityId(AppiumBy.)
-		androidDriver.findElement(AppiumBy.accessibilityId("Preference")).click();
-		androidDriver.findElement(AppiumBy.accessibilityId("3. Preference dependencies")).click();
-		androidDriver.findElement(By.id("android:id/checkbox")).click();
-		androidDriver.findElement(By.xpath("(//android.widget.RelativeLayout)[2]")).click();
-		String alertTitle = androidDriver.findElement(By.id("android:id/alerTitle")).getText();
-		Assert.assertEquals(alertTitle, "WiFi settings");
-		androidDriver.findElement(By.id("android:id/edit")).sendKeys("Ryan wifi");
-		androidDriver.findElements(AppiumBy.className("android.widget.Button")).get(1).click();
+		
 	}
 
 
