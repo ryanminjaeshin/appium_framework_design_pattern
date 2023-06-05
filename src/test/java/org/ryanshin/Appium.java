@@ -30,6 +30,8 @@ public class Appium extends BaseTest {
 		
 		ProductCatalog productCatalog = new ProductCatalog(androidDriver);
 		productCatalog.addItemToCartByIndex(0);
+		productCatalog.addItemToCartByIndex(0);
+
 		
 	}
 
