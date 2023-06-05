@@ -22,6 +22,8 @@ public class Appium extends BaseTest {
 	@Test
 	public void FillForm() throws MalformedURLException, InterruptedException {
 				
+		//-- Page Object Model --//
+		
 		formPage.setNameField("Ryan Shin");	
 		formPage.setGender("female");
 		formPage.setCountrySelection("Argentina");
@@ -30,11 +32,14 @@ public class Appium extends BaseTest {
 		
 		productCatalog.addItemToCartByIndex(0);
 		productCatalog.addItemToCartByIndex(0);
+		
 		CartPage cartPage = productCatalog.goToCartPage();
 
 		double totalSum = cartPage.getProductSum();
 		double displayFormattedSum = cartPage.getTotalAmountDisplayed();
 		Assert.assertEquals(totalSum, displayFormattedSum);
+		cartPage.acceptTermsConditions();
+		cartPage.submitOrder();
 	}
 
 
