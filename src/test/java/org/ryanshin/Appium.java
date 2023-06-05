@@ -32,7 +32,9 @@ public class Appium extends BaseTest {
 		productCatalog.addItemToCartByIndex(0);
 		CartPage cartPage = productCatalog.goToCartPage();
 
-		
+		double totalSum = cartPage.getProductSum();
+		double displayFormattedSum = cartPage.getTotalAmountDisplayed();
+		Assert.assertEquals(totalSum, displayFormattedSum);
 	}
 
 
