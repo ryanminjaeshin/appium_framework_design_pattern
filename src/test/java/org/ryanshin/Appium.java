@@ -26,9 +26,8 @@ public class Appium extends BaseTest {
 		formPage.setNameField("Ryan Shin");	
 		formPage.setGender("female");
 		formPage.setCountrySelection("Argentina");
-		formPage.submitForm();
 		
-		ProductCatalog productCatalog = new ProductCatalog(androidDriver);
+		ProductCatalog productCatalog = formPage.submitForm();
 		
 		productCatalog.addItemToCartByIndex(0);
 		productCatalog.addItemToCartByIndex(0);
