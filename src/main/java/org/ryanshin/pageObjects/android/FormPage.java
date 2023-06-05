@@ -43,5 +43,12 @@ public class FormPage {
 		nameField.sendKeys(name);
 		androidDriver.hideKeyboard();
 	}
+	
+	public void setGender(String gender) {
+		if(gender.contains("female"))
+			femaleOption.click();
+		else
+			maleOption.click();
+	}
 
 }
