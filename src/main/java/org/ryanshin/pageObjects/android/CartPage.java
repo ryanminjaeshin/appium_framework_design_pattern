@@ -41,7 +41,7 @@ public class CartPage extends AndroidActions {
 	private WebElement proceed;
 	
 	@AndroidFindBy(className="android.widget.CheckBox")
-	private WebElement checlBox;
+	private WebElement checkBox;
 	
 	//-- Action --//
 	
@@ -75,6 +75,8 @@ public class CartPage extends AndroidActions {
 	}
 	
 	public void submitOrder() {
+		checkBox.click();
+		proceed.click();
 		
 	}
 	
