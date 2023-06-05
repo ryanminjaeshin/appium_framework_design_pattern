@@ -9,6 +9,7 @@ import org.ryanshin.pageObjects.android.CartPage;
 import org.ryanshin.pageObjects.android.FormPage;
 import org.ryanshin.pageObjects.android.ProductCatalog;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
@@ -19,14 +20,14 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class Appium extends BaseTest {
 	
-	@Test
-	public void FillForm() throws MalformedURLException, InterruptedException {
+	@Test(dataProvider="getData")
+	public void FillForm(String name, String gender, String country) throws MalformedURLException, InterruptedException {
 				
 		//-- Page Object Model --//
 		
-		formPage.setNameField("Ryan Shin");	
-		formPage.setGender("female");
-		formPage.setCountrySelection("Argentina");
+		formPage.setNameField(name);	
+		formPage.setGender(gender);
+		formPage.setCountrySelection(country);
 		
 		ProductCatalog productCatalog = formPage.submitForm();
 		
@@ -42,6 +43,12 @@ public class Appium extends BaseTest {
 		cartPage.submitOrder();
 	}
 
+	@DataProvider // it always expect to return two dimensional array object.
+	public Object[][] getData() {
+		return new Object[][] {
+			{"ryan shin", "female", "Argentina"}
+		};
+	}
 
 
 }
