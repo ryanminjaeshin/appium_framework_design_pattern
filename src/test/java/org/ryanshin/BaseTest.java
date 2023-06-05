@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
+import org.ryanshin.pageObjects.android.FormPage;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -17,6 +18,7 @@ public class BaseTest {
 	
 	public AndroidDriver androidDriver;
 	public AppiumDriverLocalService appiumDriverLocalService;
+	public FormPage formPage;
 
 	@BeforeClass
 	public void ConfigureAppium() throws MalformedURLException {
@@ -38,6 +40,7 @@ public class BaseTest {
 				// add url and capabilities in parameter
 				androidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723"), uiAutomator2Options);
 				androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+				formPage = new FormPage(androidDriver);
 	}
 	
 	@AfterClass
