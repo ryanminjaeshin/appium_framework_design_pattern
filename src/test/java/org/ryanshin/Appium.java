@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.By;
+import org.ryanshin.pageObjects.android.CartPage;
 import org.ryanshin.pageObjects.android.FormPage;
 import org.ryanshin.pageObjects.android.ProductCatalog;
 import org.testng.Assert;
@@ -31,7 +32,7 @@ public class Appium extends BaseTest {
 		
 		productCatalog.addItemToCartByIndex(0);
 		productCatalog.addItemToCartByIndex(0);
-		productCatalog.goToCartPage();
+		CartPage cartPage = productCatalog.goToCartPage();
 
 		
 	}
