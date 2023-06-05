@@ -9,6 +9,7 @@ public class AndroidActions extends AppiumUtils{
 	AndroidDriver androidDriver;
 
 	public AndroidActions(AndroidDriver androidDriver) {
+		super(androidDriver);
 		this.androidDriver = androidDriver;
 	}
 
