@@ -25,6 +25,7 @@ public class Appium extends BaseTest {
 		formPage.setNameField("Ryan Shin");	
 		formPage.setGender("female");
 		formPage.setCountrySelection("Argentina");
+		formPage.submitForm();
 
 		// Actual Automation
 		// Xpath, id, className, androidUIAutomtor(AppiumBy.), accessibilityId(AppiumBy.)
