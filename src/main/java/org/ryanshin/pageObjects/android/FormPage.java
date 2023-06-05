@@ -1,5 +1,6 @@
 package org.ryanshin.pageObjects.android;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.ryanshin.utils.AndroidActions;
@@ -54,6 +55,15 @@ public class FormPage extends AndroidActions {
 			femaleOption.click();
 		else
 			maleOption.click();
+	}
+	
+	public void setCountrySelection(String countryName) {
+		//click drop down
+		countrySelection.click();
+		scrollToText(countryName);
+		androidDriver.findElement(By.xpath("//android.widget.TextView[@text='"+countryName+"']")).click();
+		
+		
 	}
 
 }
