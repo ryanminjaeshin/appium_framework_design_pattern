@@ -6,6 +6,7 @@ import java.net.URL;
 
 import org.openqa.selenium.By;
 import org.ryanshin.pageObjects.android.FormPage;
+import org.ryanshin.pageObjects.android.ProductCatalog;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -26,6 +27,9 @@ public class Appium extends BaseTest {
 		formPage.setGender("female");
 		formPage.setCountrySelection("Argentina");
 		formPage.submitForm();
+		
+		ProductCatalog productCatalog = new ProductCatalog(androidDriver);
+		productCatalog.addItemToCartByIndex(0);
 		
 	}
 

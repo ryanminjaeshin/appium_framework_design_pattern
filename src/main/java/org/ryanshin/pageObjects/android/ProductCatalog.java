@@ -1,5 +1,7 @@
 package org.ryanshin.pageObjects.android;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.ryanshin.utils.AndroidActions;
@@ -21,13 +23,15 @@ public class ProductCatalog extends AndroidActions {
 	
 	// Locator
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='ADD TO CART']")
+	// findElements = List
 	public List<WebElement> addToCart;
 	
 	
 	
 	//-- Actions --//
 	
-	public void addItemToCartByIndex() {
+	public void addItemToCartByIndex(int index) {
+		addToCart.get(index).click();
 		
 	}
 
