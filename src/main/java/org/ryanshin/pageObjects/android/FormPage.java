@@ -14,16 +14,29 @@ public class FormPage {
 	public FormPage(AndroidDriver androidDriver) {
 		
 		this.androidDriver=androidDriver;
+		
+		// this combine AndroidFindBy and androidDriver
 		PageFactory.initElements(new AppiumFieldDecorator(androidDriver), this);
 	}
 	
 	
 	// declare locator field
-	// create and add action
+	// create locator and add action
+	
+	
+	//-- Locators --//
 	
 	// Same as drver.findElement(By.id ~)
 	@AndroidFindBy(id="come.androidsample.generalstore:id/nameField")
 	private WebElement nameField;
 	
+	@AndroidFindBy(xpath="//android.widget.RadioButton[@text='Female']")
+	private WebElement femaleOption;
+	
+	//-- Actions --//
+	
+	public void setNameField(String name) {
+		nameField.sendKeys(name);
+	}
 
 }
