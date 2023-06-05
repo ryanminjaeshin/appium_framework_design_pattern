@@ -31,7 +31,7 @@ public class ProductCatalog extends AndroidActions {
 	@AndroidFindBy(xpath="com.androidsample.generalstore:id/appbar_btn_cart")
 	public WebElement cart;
 	
-	//-- Actions --//
+	//-- Actions --// --> Only calls action method not locator in Test class.
 	
 	public void addItemToCartByIndex(int index) {
 		addToCart.get(index).click();
