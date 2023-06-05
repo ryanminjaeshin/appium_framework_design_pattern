@@ -9,6 +9,7 @@ import org.ryanshin.pageObjects.android.CartPage;
 import org.ryanshin.pageObjects.android.FormPage;
 import org.ryanshin.pageObjects.android.ProductCatalog;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -43,6 +44,12 @@ public class Appium extends BaseTest {
 		cartPage.submitOrder();
 	}
 
+	
+	@BeforeMethod
+	public void preSetup() {
+		formPage.setActivity();
+	}
+	
 	@DataProvider // it always expect to return two dimensional array object.
 	public Object[][] getData() {
 		return new Object[][] {
