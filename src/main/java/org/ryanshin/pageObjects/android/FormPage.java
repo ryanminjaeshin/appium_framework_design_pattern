@@ -33,10 +33,15 @@ public class FormPage {
 	@AndroidFindBy(xpath="//android.widget.RadioButton[@text='Female']")
 	private WebElement femaleOption;
 	
+	
+	@AndroidFindBy(xpath="//android.widget.RadioButton[@text='Male']")
+	private WebElement maleOption;
+	
 	//-- Actions --//
 	
 	public void setNameField(String name) {
 		nameField.sendKeys(name);
+		androidDriver.hideKeyboard();
 	}
 
 }
