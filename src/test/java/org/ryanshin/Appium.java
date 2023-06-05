@@ -21,9 +21,7 @@ public class Appium extends BaseTest {
 	
 	@Test
 	public void FillForm() throws MalformedURLException, InterruptedException {
-		
-		FormPage formPage = new FormPage(androidDriver);
-		
+				
 		formPage.setNameField("Ryan Shin");	
 		formPage.setGender("female");
 		formPage.setCountrySelection("Argentina");
