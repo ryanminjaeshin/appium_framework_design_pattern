@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.By;
+import org.ryanshin.pageObjects.android.FormPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -19,6 +20,7 @@ public class Appium extends BaseTest {
 	@Test
 	public void WifiSettingTest() throws MalformedURLException {
 		
+		FormPage formPage = new FormPage(androidDriver);
 
 		// Actual Automation
 		// Xpath, id, className, androidUIAutomtor(AppiumBy.), accessibilityId(AppiumBy.)
