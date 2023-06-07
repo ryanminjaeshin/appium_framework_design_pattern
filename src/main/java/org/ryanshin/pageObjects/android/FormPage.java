@@ -52,7 +52,7 @@ public class FormPage extends AndroidActions {
 	public void setActivity() {
 //		Activity activity = new Activity("com.androidsample.generalstore", "com.androidsample.generalstore");
 //		androidDriver.startActivity(activity);
-		Sysyem.out.println("WIP")
+		System.out.println("WIP");
 	}
 	
 	public void setNameField(String name) {
