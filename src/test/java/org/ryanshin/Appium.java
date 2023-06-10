@@ -54,7 +54,8 @@ public class Appium extends BaseTest {
 	public Object[][] getData() {
 		return new Object[][] {
 			{"ryan shin", "female", "Argentina"},
-			{"ryan kim", "female", "Argentina"}
+			{"ryan kim", "female", "Argentina"},
+			{"ryan park", "female", "Argentina"}
 		};
 	}
 
